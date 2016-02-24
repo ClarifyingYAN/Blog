@@ -1,0 +1,54 @@
+body, div, p, input {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+input {
+	height: 40px;
+	padding-left: 10px;
+	font-size: 16px;
+}
+form {
+	padding: 50px;
+	height: 200px;
+}
+span {
+	background-color: #2C3033;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin-right: -8px;
+	line-height: 24px;
+}
+p {
+	text-align: center;
+}
+#login_box {
+	display: block;
+	width: 400px;
+	height: 300px;
+	margin: 200px auto;
+	background-color: #474546;
+}
+#submit {
+	background-color: #4EA4EF;
+	font-family: Microsoft YAHEI;
+	color: white;
+	width: 245px;
+	cursor: pointer;
+}
+#submit:hover {
+	background-color: #258DEB;
+}
+#login_btn {
+	height: 40px;
+	margin-top: 20px;
+}
+.iconfont {
+	color: #ccc;
+	display: inline-block;
+	margin-top: 2px;
+}
+.input {
+	margin-top: 14px;
+}
