@@ -40,5 +40,11 @@ class LoginController extends Controller {
 		$this->redirect('Admin/Index/index');
 
 	}
+
+	function logout() {
+		session_unset();
+		session_destroy();
+		$this->redirect('Admin/Login/index');
+	}
 }
 ?>

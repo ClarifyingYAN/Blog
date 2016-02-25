@@ -1,54 +1,66 @@
-body, div, p, input {
-	margin: 0;
-	padding: 0;
-	border: none;
+body, div, p, ul, li {
+    margin: 0;
+    padding: 0;
 }
-input {
+html {
+	height: 100%;
+}
+body {
+	background-image: url('../Images/bg.jpg');
+	height: 100%
+}
+ul {
+	list-style-type: none;
+}
+#head-bar {
 	height: 40px;
-	padding-left: 10px;
-	font-size: 16px;
+	background-color: #474546;
+	font-family: microsoft yahei;
+	font-size: 20px;
 }
-form {
-	padding: 50px;
-	height: 200px;
-}
-span {
-	background-color: #2C3033;
+#homepage{
 	display: inline-block;
-	width: 40px;
-	height: 40px;
-	margin-right: -8px;
-	line-height: 24px;
+	width: 60px;
+	height: 100%;
+	padding: 0 45px;
+	line-height: 37px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 4px;
 }
-p {
+#logout {
+	display: inline-block;
+	width: 50px;
+	height: 100%;
+	padding: 0 45px;
+	line-height: 37px;
+	float: right;
+	color: #fff;
+	text-decoration: none;
 	text-align: center;
 }
-#login_box {
+#left-lead {
+	position: fixed;
 	display: block;
-	width: 400px;
-	height: 300px;
-	margin: 200px auto;
+	width: 150px;
+	height: 100%;
 	background-color: #474546;
+	color: #fff;
+	font-family: microsoft yahei;
+	text-align: center;
 }
-#submit {
-	background-color: #4EA4EF;
-	font-family: Microsoft YAHEI;
-	color: white;
-	width: 245px;
+#content-manage {
+	padding: 10px 0;
+	letter-spacing: 4px;
+}
+#content-manage-name {
+	line-height: 33px;
 	cursor: pointer;
+	font-weight: 600;
 }
-#submit:hover {
-	background-color: #258DEB;
-}
-#login_btn {
-	height: 40px;
-	margin-top: 20px;
-}
-.iconfont {
-	color: #ccc;
-	display: inline-block;
-	margin-top: 2px;
-}
-.input {
-	margin-top: 14px;
+.content-manage-son > a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
 }

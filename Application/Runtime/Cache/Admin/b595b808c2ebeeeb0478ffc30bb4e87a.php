@@ -3,8 +3,24 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="/Blog/Application/Admin/View/Public/Css/index.css">
 </head>
 <body>
-	zheshi admin jie mian
+	<div id="head-bar">
+		<a id="homepage" href="##">Blog</a>
+		<a id="logout" href="<?php echo U('Admin/Login/logout');?>">退出</a>
+	</div>
+	<div id="left-lead">
+		<div id="content-manage">
+			<div id="content-manage-name">
+				文章管理
+			</div>
+			<ul id="content-manage-sons">
+				<li class="content-manage-son"><a href="##">添加文章</a></li>
+				<li class="content-manage-son"><a href="##">浏览文章</a></li>
+				<li class="content-manage-son"><a href="##">文章管理</a></li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>
