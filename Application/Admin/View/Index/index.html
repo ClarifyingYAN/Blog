@@ -2,8 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title>Document</title>
+	<title>Blog后台</title>
 	<link rel="stylesheet" href="__PUBLIC__/Css/index.css">
+	<base target="iframe">
 </head>
 <body>
 	<div id="head-bar">
@@ -16,11 +17,14 @@
 				文章管理
 			</div>
 			<ul id="content-manage-sons">
-				<li class="content-manage-son"><a href="##">添加文章</a></li>
-				<li class="content-manage-son"><a href="##">浏览文章</a></li>
+				<li class="content-manage-son"><a href="{:U('Admin/Index/add')}">添加文章</a></li>
+				<li class="content-manage-son"><a href="{:U('Admin/Index/show')}">浏览文章</a></li>
 				<li class="content-manage-son"><a href="##">文章管理</a></li>
 			</ul>
 		</div>
+	</div>
+	<div id="right">
+		<iframe name="iframe" src="##" scrolling="yes" frameborder="0"></iframe>
 	</div>
 </body>
 </html>
