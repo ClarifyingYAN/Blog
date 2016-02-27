@@ -3,18 +3,27 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>文章显示</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/show.css">
 </head>
 <body>
-	<div>
+	<div id="show">
 		<foreach name="show" item="v">
-			<h1 style="text-align: center;">{$v.title}</h1>
-			<div>
-				{$v.content|htmlspecialchars_decode}
-			</div>
-			<div>
-			{$v.time|date="Y-m-d H:i", ###}
-			</div>
-			<hr/>
+			<article class="article">
+				<div id="top">
+					<h1>{$v.title}</h1>
+					<p id="info"><span id="author">By:{$v.author}</span>&nbsp;&nbsp;&nbsp;<span id="viewed">被围观过:{$v.viewed}次</span></p>
+					<hr>
+				</div>
+				<div id="body">
+					{$v.content}
+				</div>
+				<div id="bottom">
+					<hr>
+					<div id="time">
+						{$v.time|date="Y-m-d H:i", ###}
+					</div>
+				</div>
+			</article>
 		</foreach>
 	</div>
 </body>

@@ -8,15 +8,15 @@
 	<script>
 	        KindEditor.ready(function(K) {
 	                window.editor = K.create('#editor_1', {
-	                	width: '800px',
-	                	height: '500px'
+	                	width: '900px',
+	                	height: '700px'
 	                });
 	        });
 	</script>
 	<link rel="stylesheet" href="/Blog/Application/Admin/View/Public/Css/add.css">
 </head>
 <body>
-	<div>
+	<div id="add-content">
 		<form action="<?php echo U('Admin/Index/addContent');?>" method="POST">
 			<input id="title" type="text" name="title" placeholder="文章标题">
 			<textarea id="editor_1" name="content"></textarea>

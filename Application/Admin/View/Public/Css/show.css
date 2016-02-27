@@ -1,0 +1,45 @@
+html, body, div, p, article, h1 {
+    margin: 0;
+    padding: 0;
+}
+div, #body {
+	display: block;
+}
+h1 {
+	text-align: center;
+	font-family: microsoft yahei;
+}
+hr {
+	width: 540px;
+	margin-left: 10px;
+	border: none;
+	height: 1px;
+	background-color: rgba(153,153,153,0.3);
+}
+.article {
+	width: 600px;
+	height: 300px;
+	margin-bottom: 40px;
+	margin-right: 30px;
+	float: left;
+}
+#body {
+	margin-left: 25px;
+	width: 500px;
+	height: 200px;
+	word-break: break-all;
+}
+#show {
+	width: 1260px;
+	margin: auto;
+}
+#info {
+	color: #999;
+}
+#time {
+	color: #999;
+	display: block;
+	width: 81px;
+	float: right;
+	margin-right: 55px;
+}

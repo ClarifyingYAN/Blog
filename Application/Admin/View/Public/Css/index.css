@@ -68,10 +68,11 @@ iframe {
 }
 #right {
 	position: fixed;
-	right: 0px;
-	top: 41px;
-	width: 1384px;
-	height: 1000px;
+	top: 40px;
+	left: 150px;
+	display: block;
+	width: 1770px;
+	height: 914px;
 }
 .content-manage-son > a {
 	display: block;

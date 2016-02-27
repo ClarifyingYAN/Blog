@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id="head-bar">
-		<a id="homepage" href="##">Blog</a>
+		<a id="homepage" href="{:U('Admin/Index/info')}">Blog</a>
 		<a id="logout" href="{:U('Admin/Login/logout')}">退出</a>
 	</div>
 	<div id="left-lead">
@@ -19,12 +19,12 @@
 			<ul id="content-manage-sons">
 				<li class="content-manage-son"><a href="{:U('Admin/Index/add')}">添加文章</a></li>
 				<li class="content-manage-son"><a href="{:U('Admin/Index/show')}">浏览文章</a></li>
-				<li class="content-manage-son"><a href="##">文章管理</a></li>
+				<li class="content-manage-son"><a href="{:U('Admin/Index/settings')}">文章管理</a></li>
 			</ul>
 		</div>
 	</div>
 	<div id="right">
-		<iframe name="iframe" src="##" scrolling="yes" frameborder="0"></iframe>
+		<iframe name="iframe" src="{:U('Admin/Index/info')}" scrolling="yes" frameborder="0"></iframe>
 	</div>
 </body>
 </html>

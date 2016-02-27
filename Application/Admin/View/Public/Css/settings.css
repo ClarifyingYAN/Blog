@@ -1,0 +1,21 @@
+html, body, div {
+	margin: 0;
+	padding: 0;
+}
+table {
+	width: 700px;
+}
+#table {
+	display: block;
+	margin: auto;
+	width: 701px;
+	height: 702px;
+}
+#del, #viewed, #like {
+	text-align: center;
+}
+#page {
+	display: block;
+	margin-top: 4px;
+	text-align: center;
+}
