@@ -3,6 +3,8 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-        echo 'Home';
+    	$content = M('content')->select();
+    	$this->assign('content', $content);
+        $this->display('spring');
     }
 }

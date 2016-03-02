@@ -10,7 +10,7 @@ body {
 }
 #add-content {
     display: block;
-    width: 803px;
+    width: 902px;
     margin: 30px auto;
 }
 #title {
@@ -32,4 +32,18 @@ body {
     color: #fff;
     border: none;
     background-color: #474546;
+}
+#select {
+    display: inline-block;
+    width: 140px;
+    margin: 0 0 5px 0;
+}
+#addcat {
+    display: inline-block;
+    width: 70px;
+}
+#addcat-body {
+    display: block;
+    width: 500px;
+    height: 150px;
 }

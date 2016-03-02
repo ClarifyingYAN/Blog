@@ -57,14 +57,17 @@ iframe {
 	font-family: microsoft yahei;
 	text-align: center;
 }
-#content-manage {
-	padding: 10px 0;
+#content-manage, #other {
+	padding: 5px 0;
 	letter-spacing: 4px;
 }
-#content-manage-name {
+#content-manage-name, #other-name  {
 	line-height: 33px;
 	cursor: pointer;
 	font-weight: 600;
+}
+#content-manage-sons {
+	display: ;
 }
 #right {
 	position: fixed;

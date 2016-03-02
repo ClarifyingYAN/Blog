@@ -10,11 +10,11 @@
 		<?php if(is_array($show)): foreach($show as $key=>$v): ?><article class="article">
 				<div id="top">
 					<h1><?php echo ($v["title"]); ?></h1>
-					<p id="info"><span id="author">By:<?php echo ($v["author"]); ?></span>&nbsp;&nbsp;&nbsp;<span id="viewed">被围观过:<?php echo ($v["viewed"]); ?>次</span></p>
+					<p id="info"><span id="author">By:<?php echo ($v["author"]); ?></span>&nbsp;&nbsp;&nbsp;<span id="viewed">被围观过:<?php echo ($v["viewed"]); ?>次</span><span id="categary" style="margin-left: 10px;">|分类:<?php echo ($v[categary][name]); ?></span></p>
 					<hr>
 				</div>
 				<div id="body">
-					<?php echo ($v["content"]); ?>
+					<?php echo (strip_tags(htmlspecialchars_decode($v["content"]))); ?>
 				</div>
 				<div id="bottom">
 					<hr>

@@ -11,11 +11,11 @@
 			<article class="article">
 				<div id="top">
 					<h1>{$v.title}</h1>
-					<p id="info"><span id="author">By:{$v.author}</span>&nbsp;&nbsp;&nbsp;<span id="viewed">被围观过:{$v.viewed}次</span></p>
+					<p id="info"><span id="author">By:{$v.author}</span>&nbsp;&nbsp;&nbsp;<span id="viewed">被围观过:{$v.viewed}次</span><span id="categary" style="margin-left: 10px;">|分类:{$v[categary][name]}</span></p>
 					<hr>
 				</div>
 				<div id="body">
-					{$v.content}
+					{$v.content|htmlspecialchars_decode|strip_tags}
 				</div>
 				<div id="bottom">
 					<hr>

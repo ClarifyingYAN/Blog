@@ -19,6 +19,16 @@
 	<div id="add-content">
 		<form action="<?php echo U('Admin/Index/addContent');?>" method="POST">
 			<input id="title" type="text" name="title" placeholder="文章标题">
+			<input type="hidden" name="author" value="admin">
+			<div id="select">
+				<span>分类:</span>
+				<select name="categary">
+					<?php if(is_array($categary)): foreach($categary as $key=>$v): ?><option value="<?php echo ($v['cid']); ?>"><?php echo ($v["name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+			</div>
+			<div id="addcat">
+				<a href="<?php echo U('Admin/Index/categary');?>">添加分类</a>
+			</div>
 			<textarea id="editor_1" name="content"></textarea>
 			<input id="submit" type="submit" name="submit" value="提交">
 		</form>

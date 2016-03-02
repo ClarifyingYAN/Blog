@@ -20,8 +20,12 @@ class IndexController extends CommonController {
 
     // 写文章功能
     Public function add() {
+        $categary = M('categary');
+        $cat = $categary->select();
+        $this->assign('categary', $cat);
     	$this->display();
     }
+
     Public function addContent() {
     	if(!IS_POST){
     		$this->error('非法请求');
@@ -32,9 +36,11 @@ class IndexController extends CommonController {
     	}
 
     	$content = M('content');
+    	$data['author'] = I('author');
     	$data['title'] = I('title');
     	$data['content'] = I('content');
     	$data['time'] = time();
+        $data['cid'] = I('categary');
 
     	if ($content->data($data)->add()) {
     		$this->success('添加成功', U('Admin/Index/show'));
@@ -44,21 +50,24 @@ class IndexController extends CommonController {
 
     //显示文章
     Public function show() {
-    	$content = M('content');
-    	$show = $content->select();
-    	$this->assign('show', $show);
+        $Content = new \Admin\Model\ContentRelationModel();
+        $list = $Content->relation(true)->select();
+        $this->assign('show', $list);
     	$this->display();
     }
+
 
     // 文章管理
     Public function settings() {
     	$content = M('content');
     	$count = $content->count();
-    	$Page = new \Think\Page($count,2);
+    	$Page = new \Think\Page($count,15);
+
     	$Page->setconfig('header', '共 %TOTAL_ROW% 篇文章');
     	$Page->setconfig('prev', '上一页');
     	$Page->setconfig('next', '下一页');
     	$Page->setconfig('theme', '%HEADER% %FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%');
+
     	$show = $Page->show();
     	$this->assign('page', $show);
 
@@ -66,6 +75,7 @@ class IndexController extends CommonController {
     	$this->assign('list', $list);
     	$this->display();
     }
+
     Public function del() {
     	if (!IS_GET) {
     		$this->error('非法请求');
@@ -75,11 +85,50 @@ class IndexController extends CommonController {
     	$where['id'] = I('id', '', intval);
 
     	if ($content->where($where)->delete()) {
-    		$this->success('成功删除', U('Admin/Index/settings'));
+    		$this->success('删除成功', U('Admin/Index/settings'));
     	} else {
     		$this->error('删除失败');
     	}
 
+    }
+
+
+    //文章分类
+    Public function categary() {
+        $categary = M('categary');
+        $cat = M('categary')->select();
+        $this->assign('categary', $cat);
+        $this->display();
+    }
+
+    Public function addcat() {
+        $categary = M('categary');
+
+        if ($data == '') {
+            $this->error('名称不能为空');
+        }
+
+        $data['name'] = I('name');
+
+        if ($categary->data($data)->add()) {
+            $this->success('添加成功', U('Admin/Index/categary'));
+        } else {
+            $this->error('添加失败');
+        }
+    }
+    Public function catdel() {
+        if (!IS_GET) {
+            $this->error('非法请求');
+        }
+
+        $categary = M('categary');
+        $Where['id'] = I('id', '', intval);
+
+        if ($categary->where($Where)->delete()) {
+            $this->success('删除成功', U('Admin/Index/categary'));
+        } else {
+            $this->error('删除失败');
+        }
     }
 
 }
