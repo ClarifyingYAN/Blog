@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>JEFF'BLOG</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/homework-winter.css">
-	<script type="text/javascript" src="__PUBLIC__/Js/homework-winter.js"></script>
+	<link rel="stylesheet" type="text/css" href="/blog/Application/Home/View/Public/Css/homework-winter.css">
+	<script type="text/javascript" src="/blog/Application/Home/View/Public/Css/homework-winter.js"></script>
 	<style type="text/css">
-		#body{background-image: url(__PUBLIC__/Picture/autumn.jpg);}
+		#body{background-image: url(/blog/Application/Home/View/Public/picture/spring.jpg);}
 	</style>
 </head>
 <body>
-	<div id="body">
+	<div id="body" 	>
 		<div class="top">
 				<div class="logo">
 					<i class="iconfont">J&#xe62f;FF'blog</i>
@@ -20,21 +20,22 @@
 					<p id="Clock2"></p>
 				</div>
 				<div class="poetry">
-					<li id="title">山行</li>
-					<li id="author">[唐] &nbsp &nbsp &nbsp 杜牧</li>
-					<li id="content1">远上寒山石径斜,白云生处有人家。</li>
-					<li id="content2">停车坐爱枫林晚,霜叶红于二月花。</li>
+					<li id="title">早春呈水部张十八员外</li>
+					<li id="author">[唐] &nbsp &nbsp &nbsp 韩愈</li>
+					<li id="content1">天街小雨润如酥，草色遥看近却无。</li>
+					<li id="content2">最是一年春好处，绝胜烟柳满皇都。</li>
 				</div>
 		</div>
+
 		<div class="middle">
 			<div class="nav">
 				<nav id="topnav">
-				<a href="spring.html" class="spring">春</a>
-				<a href="summer.html" class="summer">夏</a>
-				<a href="autumn.html" id="topnav_current" class="autumn">秋</a>
-				<a href="winter.html" class="winter">冬</a>
+				<a href="<?php echo U('Home/Index/index');?>" id="topnav_current" class="spring">春</a>
+				<a href="<?php echo U('Home/Index/summer');?>" class="summer">夏</a>
+				<a href="<?php echo U('Home/Index/autumn');?>" class="autumn">秋</a>
+				<a href="<?php echo U('Home/Index/winter');?>" class="winter">冬</a>
 				</nav>
-				</div>
+			</div>
 			<div class="left">
 				<article>
 					<div class="blog"></div>
@@ -56,7 +57,9 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="bottom"></div>
+
 	</div>
 
 </body>
