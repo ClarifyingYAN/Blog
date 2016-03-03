@@ -10,7 +10,7 @@
 		<div id="categary-name">
 			<ol>
 				<?php if(is_array($categary)): foreach($categary as $key=>$v): ?><li>
-						<a href="##" style="display: inline-block;"><?php echo ($v["name"]); ?></a>
+						<?php echo ($v["name"]); ?>
 						<a href="<?php echo U('Admin/Index/catdel', array('id' => $v['id']));?>" style="display: inline-block;">删除</a>
 					</li><?php endforeach; endif; ?>
 			</ol>

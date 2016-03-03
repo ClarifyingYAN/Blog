@@ -1,0 +1,17 @@
+html, body, div, h1 {
+	margin: 0;
+	padding: 0;
+}
+html, body{
+	height: 100%;
+	width: 100%;
+}
+#body {
+	display: block;
+	width: 1000px;
+	height: 100%;
+	margin: 40px auto;
+}
+#title {
+	text-align: center;
+}

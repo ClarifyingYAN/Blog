@@ -23,7 +23,7 @@
 			<div id="select">
 				<span>分类:</span>
 				<select name="categary">
-					<?php if(is_array($categary)): foreach($categary as $key=>$v): ?><option value="<?php echo ($v['cid']); ?>"><?php echo ($v["name"]); ?></option><?php endforeach; endif; ?>
+					<?php if(is_array($categary)): foreach($categary as $key=>$v): ?><option value="<?php echo ($v['id']); ?>"><?php echo ($v["name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 			</div>
 			<div id="addcat">

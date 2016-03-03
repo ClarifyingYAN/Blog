@@ -7,24 +7,33 @@
 </head>
 <body>
 	<div id="show">
-		<foreach name="show" item="v">
-			<article class="article">
-				<div id="top">
-					<h1>{$v.title}</h1>
-					<p id="info"><span id="author">By:{$v.author}</span>&nbsp;&nbsp;&nbsp;<span id="viewed">被围观过:{$v.viewed}次</span><span id="categary" style="margin-left: 10px;">|分类:{$v[categary][name]}</span></p>
-					<hr>
-				</div>
-				<div id="body">
-					{$v.content|htmlspecialchars_decode|strip_tags}
-				</div>
-				<div id="bottom">
-					<hr>
-					<div id="time">
-						{$v.time|date="Y-m-d H:i", ###}
+		<div id="search">
+			<form action="{:U('Admin/Index/search')}" method="POST">
+				<input id="search-txt" type="text" name="word">
+				<input id="search-btn" type="submit" name="submit" value="SEARCH">
+			</form>
+		</div>
+		<div id="content">
+			<foreach name="show" item="v">
+				<article class="article">
+					<div id="top">
+						<h1><a id="title" href="{:U('Admin/Content/index', array('id' => $v['id']))}">{$v.title}</a></h1>
+						<p id="info"><span id="author">By:{$v.author}</span>&nbsp;&nbsp;&nbsp;<span id="viewed">被围观过:{$v.viewed}次</span><span id="categary" style="margin-left: 10px;">|分类:{$v[categary][name]}</span></p>
+						<hr>
 					</div>
-				</div>
-			</article>
-		</foreach>
+					<div id="body">
+						{$v.content|htmlspecialchars_decode|strip_tags}
+					</div>
+					<div id="bottom">
+						<hr>
+						<div id="time">
+							{$v.time|date="Y-m-d H:i", ###}
+						</div>
+					</div>
+				</article>
+			</foreach>
+			<div id="page">{$page}</div>
+		</div>
 	</div>
 </body>
 </html>

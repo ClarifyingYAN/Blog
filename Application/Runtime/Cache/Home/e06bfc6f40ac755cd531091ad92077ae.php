@@ -3,10 +3,10 @@
 <head>
 	<title>JEFF'BLOG</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/Blog/Application/Home/View/Public/css/homework-winter.css">
-	<script type="text/javascript" src="/Blog/Application/Home/View/Public/js/homework-winter.js"></script>
+	<link rel="stylesheet" type="text/css" href="/blog/Application/Home/View/Public/css/homework-winter.css">
+	<script type="text/javascript" src="/blog/Application/Home/View/Public/js/homework-winter.js"></script>
 	<style type="text/css">
-		#body{background-image: url(/Blog/Application/Home/View/Public/picture/spring.jpg);}
+		#body{background-image: url(/blog/Application/Home/View/Public/picture/spring.jpg);}
 	</style>
 </head>
 <body>
