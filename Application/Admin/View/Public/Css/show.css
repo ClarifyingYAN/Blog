@@ -23,7 +23,7 @@ hr {
 }
 #title{
 	text-decoration: none;
-	color: black;
+	color: #ff5f21;
 }
 #body {
 	margin-left: 25px;
@@ -31,6 +31,7 @@ hr {
 	height: 198px;
 	word-break: break-all;
 	overflow: hidden;
+	font-size: 22px;
 }
 #show {
 	width: 1260px;
@@ -59,7 +60,7 @@ hr {
 }
 #search-btn {
 	border: none;
-	background-color: #aaa;
+	background-color: #f9320c;
 	font-family: microsoft yahei;
 	color: #fff;
 	line-height: 30px;

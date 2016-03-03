@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>文章分类</title>
-	<link rel="stylesheet" href="/Blog/Application/Admin/View/Public/Css/categary.css">
+	<link rel="stylesheet" href="/blog/Application/Admin/View/Public/Css/categary.css">
 </head>
 <body>
 	<div id="categary">

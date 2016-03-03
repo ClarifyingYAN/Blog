@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>管理</title>
-	<link rel="stylesheet" href="/Blog/Application/Admin/View/Public/Css/settings.css">
+	<link rel="stylesheet" href="/blog/Application/Admin/View/Public/Css/settings.css">
 </head>
 <body>
 	<div id="table">

@@ -3,12 +3,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>文章显示</title>
-	<link rel="stylesheet" href="/Blog/Application/Admin/View/Public/Css/show.css">
+	<link rel="stylesheet" href="/blog/Application/Admin/View/Public/Css/show.css">
 </head>
 <body>
 	<div id="show">
 		<div id="search">
-			<form action="<?php echo U('Admin/Index/search');?>" method="POST">
+			<form action="<?php echo U('Admin/Index/show');?>" method="POST">
 				<input id="search-txt" type="text" name="word">
 				<input id="search-btn" type="submit" name="submit" value="SEARCH">
 			</form>

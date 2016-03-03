@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>Blog后台</title>
-	<link rel="stylesheet" href="/Blog/Application/Admin/View/Public/Css/index.css">
+	<link rel="stylesheet" href="/blog/Application/Admin/View/Public/Css/index.css">
 	<base target="iframe">
 </head>
 <body>
@@ -30,12 +30,12 @@
 	</div>
 </body>
 </html>
-	<script>
-		document.querySelector("#content-manage-name").onclick = function () {
-			if (document.querySelector("#content-manage-sons").style.display == "none") {
-				document.querySelector("#content-manage-sons").style.display = "block";
-			} else {
-				document.querySelector("#content-manage-sons").style.display = "none";
-			}
+<script>
+	document.querySelector("#content-manage-name").onclick = function () {
+		if (document.querySelector("#content-manage-sons").style.display == "none") {
+			document.querySelector("#content-manage-sons").style.display = "block";
+		} else {
+			document.querySelector("#content-manage-sons").style.display = "none";
 		}
-	</script>
+	}
+</script>

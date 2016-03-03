@@ -50,10 +50,20 @@ class IndexController extends CommonController {
 
     //显示文章
     Public function show() {
+        $word = I('word');
         $content = new \Admin\Model\ContentRelationModel();
 
-        $count = $content->count();
-        $Page = new \Think\Page($count,10);
+        $where['title'] = array('like', "%{$word}%");
+        $where['content'] = array('like', "%{$word}%");
+        $where['_logic'] = 'OR';
+
+        $count = $content->where($where)->count();
+
+        if($count == 0) {
+            echo '没有';
+        }
+
+        $Page = new \Think\Page($count,6);
         $Page->setconfig('header', '共 %TOTAL_ROW% 篇文章');
         $Page->setconfig('prev', '上一页');
         $Page->setconfig('next', '下一页');
@@ -63,12 +73,14 @@ class IndexController extends CommonController {
         $this->assign('page', $show);
 
         $list = $content
+            ->where($where)
             ->order('time desc')
             ->limit($Page->firstRow.','.$Page->listRows)
             ->relation(true)
             ->select();
         $this->assign('show', $list);
-    	$this->display();
+
+        $this->display('show');
     }
 
 
@@ -148,43 +160,6 @@ class IndexController extends CommonController {
         } else {
             $this->error('删除失败');
         }
-    }
-
-
-    // 搜索
-    Public function search() {
-
-        $word = I('word');
-        $content = new \Admin\Model\ContentRelationModel();
-
-        $where['title'] = array('like', "%{$word}%");
-        $where['content'] = array('like', "%{$word}%");
-        $where['_logic'] = 'OR';
-
-        $count = $content->where($where)->count();
-
-        if($count == 0) {
-            echo '没有';
-        }
-
-        $Page = new \Think\Page($count,2);
-        $Page->setconfig('header', '共 %TOTAL_ROW% 篇文章');
-        $Page->setconfig('prev', '上一页');
-        $Page->setconfig('next', '下一页');
-        $Page->setconfig('theme', '%HEADER% %FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%');
-
-        $show = $Page->show();
-        $this->assign('page', $show);
-
-        $list = $content
-            ->where($where)
-            ->order('time desc')
-            ->limit($Page->firstRow.','.$Page->listRows)
-            ->relation(true)
-            ->select();
-        $this->assign('show', $list);
-
-        $this->display('show');
     }
 
 }

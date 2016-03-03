@@ -3,8 +3,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>添加文章</title>
-	<script charset="utf-8" src="/Blog/Application/Admin/View/Public/editor/kindeditor.js"></script>
-	<script charset="utf-8" src="/Blog/Application/Admin/View/Public/editor/lang/zh_CN.js"></script>
+	<script charset="utf-8" src="/blog/Application/Admin/View/Public/editor/kindeditor.js"></script>
+	<script charset="utf-8" src="/blog/Application/Admin/View/Public/editor/lang/zh_CN.js"></script>
 	<script>
 	        KindEditor.ready(function(K) {
 	                window.editor = K.create('#editor_1', {
@@ -13,7 +13,7 @@
 	                });
 	        });
 	</script>
-	<link rel="stylesheet" href="/Blog/Application/Admin/View/Public/Css/add.css">
+	<link rel="stylesheet" href="/blog/Application/Admin/View/Public/Css/add.css">
 </head>
 <body>
 	<div id="add-content">

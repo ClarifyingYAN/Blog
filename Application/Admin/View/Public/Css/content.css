@@ -13,5 +13,7 @@ html, body{
 	margin: 40px auto;
 }
 #title {
+	font-family: microsoft yahei;
 	text-align: center;
+	color: #ff5f21;
 }

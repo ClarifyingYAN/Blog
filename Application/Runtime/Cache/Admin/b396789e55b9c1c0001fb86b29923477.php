@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>信息</title>
-	<link rel="stylesheet" href="/Blog/Application/Admin/View/Public/Css/info.css">
+	<link rel="stylesheet" href="/blog/Application/Admin/View/Public/Css/info.css">
 </head>
 <body>
 	<div id="info">
