@@ -5,20 +5,20 @@
 	<title>添加文章</title>
 	<script charset="utf-8" src="__PUBLIC__/editor/kindeditor.js"></script>
 	<script charset="utf-8" src="__PUBLIC__/editor/lang/zh_CN.js"></script>
+	<link rel="stylesheet" href="__PUBLIC__/Css/add.css">
+</head>
+<body>
 	<script>
 	        KindEditor.ready(function(K) {
-	                window.editor = K.create('#editor_1', {
+	                editor = K.create('#editor_1', {
 	                	width: '900px',
 	                	height: '700px'
 	                });
 	        });
 	</script>
-	<link rel="stylesheet" href="__PUBLIC__/Css/add.css">
-</head>
-<body>
 	<div id="add-content">
 		<form action="{:U('Admin/Index/addContent')}" method="POST">
-			<input id="title" type="text" name="title" placeholder="文章标题">
+			<input id="title" type="text" name="title" placeholder="文章标题" value="{$content[0]['title']}">
 			<input type="hidden" name="author" value="admin">
 			<div id="select">
 				<span>分类:</span>
@@ -31,7 +31,7 @@
 			<div id="addcat">
 				<a href="{:U('Admin/Index/categary')}">添加分类</a>
 			</div>
-			<textarea id="editor_1" name="content"></textarea>
+			<textarea id="editor_1" name="content">{$content[0][content]}</textarea>
 			<input id="submit" type="submit" name="submit" value="提交">
 		</form>
 	</div>

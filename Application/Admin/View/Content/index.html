@@ -6,11 +6,16 @@
 	<link rel="stylesheet" href="__PUBLIC__/Css/content.css">
 </head>
 <body>
-	<div id="body">
-		<h1 id="title">{$content.title}</h1>
-		<article id="article">
-			{$content.content|htmlspecialchars_decode}
-		</article>
+	<div>
+		<div id="body">
+			<h1 id="title">{$content.title}</h1>
+			<article id="article">
+				{$content.content|htmlspecialchars_decode}
+			</article>
+		</div>
+	</div>
+	<div id="editor">
+		<a id="btn" href="{:U('Admin/Index/add', array('id' => $content['id']))}">编辑</a>
 	</div>
 </body>
 </html>

@@ -23,6 +23,11 @@ class IndexController extends CommonController {
         $categary = M('categary');
         $cat = $categary->select();
         $this->assign('categary', $cat);
+
+        $where[id] = I('id', '', intval);
+        $content = M('content')->where($where)->select();
+        $this->assign('content', $content);
+
     	$this->display();
     }
 
