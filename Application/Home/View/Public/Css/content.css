@@ -27,20 +27,3 @@ html, body {
     height: 40px;
     margin: 20px auto 70px;
 }
-#btn {
-    font-family: microsoft yahei;
-    font-size: 20px;
-    line-height: 40px;
-
-    float: right;
-
-    width: 100px;
-    height: 40px;
-
-    text-align: center;
-    text-decoration: none;
-
-    color: #fff;
-    border: none;
-    background-color: #474546;
-}

@@ -29,23 +29,23 @@
 		<div class="middle">
 			<div class="nav">
 				<nav id="topnav">
-				<a href="spring.html" class="spring">春</a>
-				<a href="summer.html" id="topnav_current" class="summer">夏</a>
-				<a href="autumn.html" class="autumn">秋</a>
-				<a href="winter.html" class="winter">冬</a>
+				<a href="{:U('Home/Index/index')}" class="spring">春</a>
+				<a href="{:U('Home/Index/summer')}" id="topnav_current" class="summer">夏</a>
+				<a href="{:U('Home/Index/autumn')}" class="autumn">秋</a>
+				<a href="{:U('Home/Index/winter')}" class="winter">冬</a>
 				</nav>
 				</div>
 			<div class="left">
 				<article>
-					<div class="blog"></div>
-					<div class="blog"></div>
+					<div class="blog"><h1><a href="{:U('Home/Index/content', array('id' => $content[1]['id']))}" style="color: white;">{$content[1]['title']}</a></h1></div>
+					<div class="blog">{$content[1]['content']|htmlspecialchars_decode}</div>
 					<div class="blog"></div>
 				</article>
 			</div>
 			<div class="right">
 				<div class="myself"></div><br><br>
 				<h2>关于我</h2>
-				<p><i class="iconfont2">&#xe638;</i>姓名：Jeff</p>
+				<p><i class="iconfont2">&#xe638;</i>姓名：{$info[0]['name']}</p>
 				<p><i class="iconfont2">&#xe6b4;</i>职业：学生 ==> <a href="http://www.cqupt.edu.cn/cqupt/index.shtml">我的母校</a></p>
 				<p><a href="http://map.baidu.com/" target="_blank"><i class="iconfont2">&#xe650;</i>籍贯：重庆</a></p>
 				<p><i class="iconfont2">&#xe67e;</i>电话：134521****5</p>

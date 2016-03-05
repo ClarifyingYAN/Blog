@@ -2,16 +2,14 @@ html, body, textarea, div {
     margin: 0;
     padding: 0;
 }
-html {
+html, body {
     height: 100%;
-}
-body {
-    height: 100%;
+    width: 100%;
 }
 #add-content {
     display: block;
     width: 902px;
-    margin: 30px auto;
+    margin: 30px auto 70px;
 }
 #title {
     font-size: 24px;

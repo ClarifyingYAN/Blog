@@ -152,6 +152,7 @@ class IndexController extends CommonController {
             $this->error('添加失败');
         }
     }
+
     Public function catdel() {
         if (!IS_GET) {
             $this->error('非法请求');
@@ -167,4 +168,34 @@ class IndexController extends CommonController {
         }
     }
 
+
+    //其他
+    Public function other() {
+        $info = M('other')->select();
+        $this->assign('info', $info);
+        $this->display();
+    }
+
+    Public function addbasic() {
+        $other = M('other');
+        if (I('name') !== '') {
+            $data['name'] = I('name');
+        }
+
+        if (I('tel') !== '') {
+            if (!is_numeric(I('tel'))) {
+               $this->error('电话必须为数字');
+            }else {
+                $data['telephone'] = I('tel');
+            }
+        }
+
+        if (I('email') !== '') {
+            $data['email'] = I('email');
+        }
+
+        if ($other->where('id = 1')->data($data)->save()) {
+            $this->success('保存成功', U('Admin/Index/other'));
+        }
+    }
 }

@@ -24,6 +24,9 @@
 		</div>
 		<div id="other">
 			<div id="other-name">其他设置</div>
+			<ul id="other-sons">
+				<li class="other-son"><a href="{:U('Admin/Index/other')}">基本信息</a></li>
+			</ul>
 		</div>
 	</div>
 	<div id="right">
@@ -39,4 +42,13 @@
 			document.querySelector("#content-manage-sons").style.display = "none";
 		}
 	}
+
+	document.querySelector("#other-name").onclick = function () {
+		if (document.querySelector("#other-sons").style.display == "none") {
+			document.querySelector("#other-sons").style.display = "block";
+		} else {
+			document.querySelector("#other-sons").style.display = "none";
+		}
+	}
+
 </script>
