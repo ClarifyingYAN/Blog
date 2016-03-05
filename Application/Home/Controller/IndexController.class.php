@@ -3,7 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     Public function index() {
-    	$content = M('content')->select();
+    	$content = M('content')->order('time desc')->select();
     	$this->assign('content', $content);
 
         $info = M('other')->select();
@@ -12,7 +12,7 @@ class IndexController extends Controller {
     }
 
     Public function summer() {
-        $content = M('content')->select();
+        $content = M('content')->order('time desc')->select();
         $this->assign('content', $content);
 
         $info = M('other')->select();
@@ -21,7 +21,7 @@ class IndexController extends Controller {
     }
 
     Public function autumn() {
-        $content = M('content')->select();
+        $content = M('content')->order('time desc')->select();
         $this->assign('content', $content);
 
         $info = M('other')->select();
@@ -30,7 +30,7 @@ class IndexController extends Controller {
     }
 
     Public function winter() {
-        $content = M('content')->select();
+        $content = M('content')->order('time desc')->select();
         $this->assign('content', $content);
 
         $info = M('other')->select();
